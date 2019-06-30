@@ -1,0 +1,162 @@
+capital = 361
+
+oob = "OCE_1936"
+
+set_research_slots = 5
+set_stability = 0.90
+set_war_support = 0.90
+
+1939.1.1 = {
+
+	add_political_power = 1199
+	
+	#adding ministers
+	add_ideas = {
+		OCE_robert_taft
+		carl_spaatz
+		jimmy_doolittle
+		army_ordnance_department
+		general_electric
+		robert_goddard
+		OCE_prepare_intervention
+
+		volunteer_only
+
+		new_deal
+	}
+
+	#focuses
+	unlock_national_focus = OCE_wpa
+	unlock_national_focus = OCE_war_propaganda
+	unlock_national_focus = OCE_prepare_intervention
+	complete_national_focus = OCE_military_construction
+	complete_national_focus = OCE_air_war_plans_division
+	complete_national_focus = OCE_reinforce_monroe_doctrine
+	complete_national_focus = OCE_bureau_of_ships
+	complete_national_focus = OCE_escort_effort
+	complete_national_focus = OCE_amphibious_operations
+	complete_national_focus = OCE_expand_the_USMC
+	complete_national_focus = OCE_convoy_tactics
+	complete_national_focus = OCE_fund_the_navy
+
+
+		#doctrines
+		#Air
+		air_superiority = 1
+		infrastructure_destruction = 1
+		naval_strike_tactics = 1
+
+		sup_delay = 1
+		submarine_operations_bs = 1
+		carrier_primacy = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_encryption = 1
+		basic_decryption = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		oil_processing = 1
+		improved_oil_processing = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		dispersed_industry3 = 1
+	}
+	create_equipment_variant = {
+		name = "Martin M166"
+		type = tac_bomber_equipment_0
+		upgrades = {
+			plane_tac_bomb_upgrade = 2
+			plane_range_upgrade = 1
+			plane_engine_upgrade = 2
+			plane_reliability_upgrade = 3
+		}
+	}
+}
+
+
+
+
+set_convoys = 400
+
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 00
+		}
+
+		fascism = {
+			popularity = 90
+		}
+		
+		communism = {
+			popularity = 05
+			#banned = no #default is no
+		}
+	}
+	
+	ruling_party = fascist
+	last_election = "1932.11.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+add_ideas = {
+	free_trade
+	home_of_the_free
+}
+
+
+# DIPLOMACY
+1939.1.1 = {
+
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 0
+			}
+
+			fascism = {
+				popularity = 90
+			}
+			
+			communism = {
+				popularity = 05
+				#banned = no #default is no
+			}
+		}
+		
+		ruling_party = fascist
+		last_election = "1936.11.3"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+}
+
+create_country_leader = {
+	name = "Big Brother"
+	desc = "POLITICS_BIG_BROTHER_DESC"
+	picture = "Portrait_OCE_Big_Brother.dds"
+	expire = "1947.1.1"
+	ideology = fascism
+	traits = {
+		dislikes_eastasia
+	}
+}
+
+
+
